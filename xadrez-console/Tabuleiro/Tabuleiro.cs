@@ -15,9 +15,15 @@ namespace tabuleiro
             pecas = new Peca[linhas, colunas]; //recebe a matriz
         }
 
-        public Peca peca(int linha, int coluna)
+        public Peca peca(int linha, int coluna) //operação que acessa a peça pois ela é private
         {
             return pecas[linha, coluna];
+        }
+
+        public void colocarPeca(Peca p, Posicao pos)
+        {
+            pecas[pos.linha, pos.coluna] = p; //jogando peça P na matriz nessa posição
+            p.posicao = pos;
         }
 
     }
