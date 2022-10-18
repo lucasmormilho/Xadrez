@@ -15,6 +15,11 @@ namespace tabuleiro
             pecas = new Peca[linhas, colunas]; //recebe a matriz
         }
 
+        public Peca peca(int linha, int coluna)
+        {
+            return pecas[linha, coluna];
+        }
+
     }
 
 }
